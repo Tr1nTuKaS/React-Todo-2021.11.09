@@ -25,12 +25,15 @@ const initTodos = [
 function TodoListPage() {
   const [todosArr, setTodosArr] = useState(initTodos);
   // create state todosArr using useState
+  const handleAddNewTodo = () => {
+    console.log('add new');
+  };
   return (
     <div className='container'>
       <TodoHeader />
       <section className='content'>
         <TodoList todos={todosArr} />
-        <TodoAddNew />
+        <TodoAddNew onAddNewTodo={handleAddNewTodo} />
       </section>
     </div>
   );
