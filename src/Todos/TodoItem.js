@@ -1,3 +1,5 @@
+import css from '../styles/TodoItem.module.css';
+
 import { useState } from 'react';
 function TodoItem(props) {
   const [isEditOn, setIsEditOn] = useState(false);
@@ -6,7 +8,7 @@ function TodoItem(props) {
   // checked styles item line-through, fa-check-circle
 
   const itemClasses = () => {
-    return props.isDone ? 'item line-through' : 'item';
+    return props.isDone ? `${css.item} ${css['line-through']}` : css.item;
   };
   const checkCircleClasses = () => {
     return `fa fa-${props.isDone ? 'check-circle' : 'circle-thin'}`;

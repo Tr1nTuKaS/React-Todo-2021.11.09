@@ -1,3 +1,5 @@
+import css from '../styles/TodoAddNew.module.css';
+
 import { useState } from 'react';
 // TodoAddNew
 function TodoAddNew(props) {
@@ -15,7 +17,7 @@ function TodoAddNew(props) {
   };
 
   return (
-    <div className='add-item'>
+    <div className={css['add-item']}>
       <i
         onClick={sentTodoTitle}
         id='add-todo-btn'
