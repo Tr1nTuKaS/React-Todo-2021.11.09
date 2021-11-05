@@ -48,6 +48,9 @@ function TodoListPage() {
     setTodosArr(filteredMainArr);
   };
 
+  // handleEditTodo - pass it down to TodoItem
+  // find item with id === id, update its title without modifying original arr
+
   return (
     <div className='container'>
       <TodoHeader />
