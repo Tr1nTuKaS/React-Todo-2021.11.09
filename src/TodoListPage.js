@@ -1,21 +1,30 @@
 import './styles/TodoStyles.css';
+import TodoHeader from './Todos/TodoHeader';
+import TodoItem from './Todos/TodoItem';
+
+const initTodos = [
+  {
+    id: 1,
+    title: 'Drink coffe',
+    isDone: false,
+  },
+  {
+    id: 2,
+    title: 'Go to park',
+    isDone: true,
+  },
+  {
+    id: 3,
+    title: 'Make a pie',
+    isDone: false,
+  },
+];
 
 function TodoListPage() {
+  // create state todosArr using useState
   return (
     <div className='container'>
-      <header>
-        <div className='clear'>
-          <i id='reset' className='fa fa-refresh'></i>
-        </div>
-        <p id='date' className='date'>
-          Kraunasi...
-        </p>
-        <img
-          className='img-fluid cover-img'
-          src='/img/gold.jpg'
-          alt='Cover image'
-        />
-      </header>
+      <TodoHeader />
       <section className='content'>
         <ul id='list' className='list'>
           <li className='item line-through'>
@@ -36,6 +45,7 @@ function TodoListPage() {
             <i className='fa fa-pencil edit-icon' aria-hidden='true'></i>
             <i className='fa fa-trash delete-icon' aria-hidden='true'></i>
           </li>
+          <TodoItem />
         </ul>
         <div className='add-item'>
           <i
