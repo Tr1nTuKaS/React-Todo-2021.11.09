@@ -23,17 +23,19 @@ const initTodos = [
 ];
 
 function TodoListPage() {
+  const [todoIdCounter, setTodoIdCounter] = useState(4);
   const [todosArr, setTodosArr] = useState(initTodos);
   // create state todosArr using useState
-  const handleAddNewTodo = () => {
+  const handleAddNewTodo = (title) => {
     console.log('add new');
     const newTodoObj = {
-      id: 4,
-      title: 'I am new todo',
+      id: todoIdCounter,
+      title: title,
       isDone: false,
     };
     const newTodoArrState = [...todosArr, newTodoObj];
     setTodosArr(newTodoArrState);
+    setTodoIdCounter(() => todoIdCounter + 1);
   };
   return (
     <div className='container'>

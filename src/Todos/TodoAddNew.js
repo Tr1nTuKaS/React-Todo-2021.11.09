@@ -7,10 +7,17 @@ function TodoAddNew(props) {
   const handleNewTodoInput = (e) => {
     setNewTitle(e.target.value);
   };
+
+  const sentTodoTitle = () => {
+    if (!newTitle) return;
+    props.onAddNewTodo(newTitle);
+    setNewTitle('');
+  };
+
   return (
     <div className='add-item'>
       <i
-        onClick={props.onAddNewTodo}
+        onClick={sentTodoTitle}
         id='add-todo-btn'
         className='fa fa-plus-circle'
         aria-hidden='true'
