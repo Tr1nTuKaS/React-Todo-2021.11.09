@@ -27,6 +27,13 @@ function TodoListPage() {
   // create state todosArr using useState
   const handleAddNewTodo = () => {
     console.log('add new');
+    const newTodoObj = {
+      id: 4,
+      title: 'I am new todo',
+      isDone: false,
+    };
+    const newTodoArrState = [...todosArr, newTodoObj];
+    setTodosArr(newTodoArrState);
   };
   return (
     <div className='container'>
