@@ -6,10 +6,9 @@ function TodoList(props) {
   // generate todos
   return (
     <ul id='list' className='list'>
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {props.todos.map((todo) => (
+        <TodoItem key={todo.id} title={todo.title} />
+      ))}
     </ul>
   );
 }
