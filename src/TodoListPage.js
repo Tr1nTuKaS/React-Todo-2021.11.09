@@ -37,11 +37,19 @@ function TodoListPage() {
     setTodosArr(newTodoArrState);
     setTodoIdCounter(() => todoIdCounter + 1);
   };
+
+  const handleTodoDelete = (id) => {
+    console.log('you want to delete todo with id', id);
+    // call handleTodoDelete from todo item
+    //  setTodosArr with state copy without the one obj that has id === id
+    // filter
+  };
+
   return (
     <div className='container'>
       <TodoHeader />
       <section className='content'>
-        <TodoList todos={todosArr} />
+        <TodoList todos={todosArr} onTodoDelete={handleTodoDelete} />
         <TodoAddNew onAddNewTodo={handleAddNewTodo} />
       </section>
     </div>
