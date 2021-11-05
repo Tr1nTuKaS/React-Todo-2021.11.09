@@ -23,8 +23,9 @@ const initTodos = [
 ];
 
 function TodoListPage() {
-  const [todoIdCounter, setTodoIdCounter] = useState(4);
   const [todosArr, setTodosArr] = useState(initTodos);
+
+  const [todoIdCounter, setTodoIdCounter] = useState(4);
   // create state todosArr using useState
   const handleAddNewTodo = (title) => {
     console.log('add new');
@@ -38,11 +39,13 @@ function TodoListPage() {
     setTodoIdCounter(() => todoIdCounter + 1);
   };
 
-  const handleTodoDelete = (id) => {
-    console.log('you want to delete todo with id', id);
+  const handleTodoDelete = (deleteId) => {
+    console.log('you want to delete todo with id', deleteId);
     // call handleTodoDelete from todo item
     //  setTodosArr with state copy without the one obj that has id === id
     // filter
+    const filteredMainArr = todosArr.filter((tObj) => tObj.id !== deleteId);
+    setTodosArr(filteredMainArr);
   };
 
   return (
