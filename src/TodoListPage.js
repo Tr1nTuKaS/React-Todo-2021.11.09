@@ -53,12 +53,14 @@ function TodoListPage() {
   // find item with id === id, update its title without modifying original arr
 
   return (
-    <div className='container'>
-      <TodoHeader />
-      <section className='content'>
-        <TodoList todos={todosArr} onTodoDelete={handleTodoDelete} />
-        <TodoAddNew onAddNewTodo={handleAddNewTodo} />
-      </section>
+    <div className='body'>
+      <div className='container'>
+        <TodoHeader />
+        <section className='content'>
+          <TodoList todos={todosArr} onTodoDelete={handleTodoDelete} />
+          <TodoAddNew onAddNewTodo={handleAddNewTodo} />
+        </section>
+      </div>
     </div>
   );
 }
