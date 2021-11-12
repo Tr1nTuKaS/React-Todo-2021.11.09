@@ -81,3 +81,34 @@ header {
   border-bottom-right-radius: 4px;
   margin-top: -5px;
 }
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Add todo  */
+
+.add-item {
+  display: flex;
+  align-items: center;
+}
+
+.add-item i {
+  cursor: pointer;
+  color: DodgerBlue;
+  font-size: 1.5rem;
+  padding: 15px 5px 15px 15px;
+}
+
+.add-item input {
+  font-size: 1rem;
+  padding: 6px 8px;
+  width: 100%;
+  margin-right: 15px;
+}
